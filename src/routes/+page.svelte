@@ -7,7 +7,8 @@
 	const latest = getAllLatest();
 
 </script>
-<div class="max-w-7xl mx-auto px-4">
+
+
   <h1 class="text-4xl font-bold">Severe material and social deprivation</h1>
 
   <div class="mt-12 mb-12 space-y-4 text-lg text-gray-700">
@@ -47,4 +48,3 @@
     <EuropeMap data={data} title="Average 2015-2023" />
     <EuropeMap data={latest} title="Latest 2023" />
   </div>
-</div>
