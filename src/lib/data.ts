@@ -499,7 +499,7 @@ export const europeData: CountryData[] = [
 		]
 	},
 	{
-		country: 'Türkiye',
+		country: 'Turkey',
 		values: [
 			{ year: 2015, value: null },
 			{ year: 2016, value: null },
@@ -513,3 +513,39 @@ export const europeData: CountryData[] = [
 		]
 	}
 ];
+
+export function getAverageByCountry(countryName: string): number {
+	const country = europeData.find((c) => c.country === countryName);
+	if (!country) return 0;
+
+	const validValues = country.values
+		.map((v) => v.value)
+		.filter((value): value is number => value !== null && value !== undefined);
+
+	if (validValues.length === 0) return 0;
+
+	const sum = validValues.reduce((acc, curr) => acc + curr, 0);
+	return Number((sum / validValues.length).toFixed(1));
+}
+
+export function getLatestByCountry(countryName: string): number | null {
+	const country = europeData.find((c) => c.country === countryName);
+	if (!country) return null;
+
+	const latest = country.values.find((v) => v.year === 2023);
+	return latest?.value ?? null;
+}
+
+export function getAllLatest(): { country: string; value: number | null }[] {
+	return europeData.map((country) => ({
+		country: country.country,
+		value: getLatestByCountry(country.country)
+	}));
+}
+
+export function getAllAverages(): { country: string; value: number }[] {
+	return europeData.map((country) => ({
+		country: country.country,
+		value: getAverageByCountry(country.country)
+	}));
+}
