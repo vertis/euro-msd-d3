@@ -36,7 +36,7 @@ export const europeData: CountryData[] = [
 		]
 	},
 	{
-		country: 'Czechia',
+		country: 'Czech Republic', // Must match the topojson: Czechia
 		values: [
 			{ year: 2015, value: 4.5 },
 			{ year: 2016, value: 3.5 },
@@ -457,7 +457,7 @@ export const europeData: CountryData[] = [
 		]
 	},
 	{
-		country: 'North Macedonia',
+		country: 'The former Yugoslav Republic of Macedonia', // Must match the topojson: North Macedonia
 		values: [
 			{ year: 2015, value: 29.1 },
 			{ year: 2016, value: 27.5 },
