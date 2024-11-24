@@ -1,38 +1,82 @@
-# sv
+# European Material Deprivation Map
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+An interactive visualization of severe material and social deprivation across Europe using D3.js and SvelteKit.
 
-## Creating a project
+## Overview
 
-If you're seeing this, you've probably already done this step. Congrats!
+This project visualizes Eurostat data on material and social deprivation across European countries. It shows both historical averages (2015-2023) and the latest data (2023) through interactive choropleth maps.
+
+The visualization helps track progress towards the EU's goal of reducing poverty and social exclusion by 15 million people by 2030.
+
+## Features
+
+- Interactive choropleth maps of Europe using D3.js
+- Two visualization modes:
+  - Average deprivation rates (2015-2023)
+  - Latest deprivation rates (2023)
+- Color-coded representation of deprivation levels
+- Country-level data display
+- Responsive design
+
+## Technology Stack
+
+- [SvelteKit](https://kit.svelte.dev/) - Web application framework
+- [D3.js](https://d3js.org/) - Data visualization library
+- [TypeScript](https://www.typescriptlang.org/) - Type-safe JavaScript
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+- [Vite](https://vitejs.dev/) - Build tool and development server
+
+## Getting Started
+
+1. Clone the repository:
 
 ```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
+git clone <repository-url>
+cd euro-msd-d3
 ```
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+2. Install dependencies:
 
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+bun install
 ```
 
-## Building
-
-To create a production version of your app:
+3. Start the development server:
 
 ```bash
-npm run build
+bun run dev
 ```
 
-You can preview the production build with `npm run preview`.
+4. Open your browser and navigate to `http://localhost:5173`
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+## Data Source
+
+The data comes from Eurostat's statistics on living conditions in Europe, specifically focusing on material deprivation and economic strain. The measurement includes 13 key items:
+
+### Household Items
+
+- Unexpected expenses
+- One week holiday per year
+- No bill arrears
+- Meat/equivalent every other day
+- Adequate home heating
+- Car/van access
+- Replacing worn-out furniture
+
+### Individual Items
+
+- Internet access
+- Replacing worn-out clothes
+- Two pairs of shoes
+- Weekly personal spending money
+- Regular leisure activities
+- Monthly social outings
+
+## License
+
+MIT
+
+## Data Sources & References
+
+- [Eurostat - Living Conditions in Europe](https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Living_conditions_in_Europe_-_material_deprivation_and_economic_strain#Context)
+- [Source Data](https://ec.europa.eu/eurostat/databrowser/view/ilc_mdsd18/default/table?lang=en&category=livcon.ilc.ilc_md.ilc_mdsd)
