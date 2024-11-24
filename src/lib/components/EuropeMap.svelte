@@ -65,7 +65,14 @@
       .data(countries.features)
       .enter()
       .append('text')
-      .attr('transform', d => `translate(${path.centroid(d)})`)
+      .attr('transform', d => {
+        // Special case for Norway - shift the text down a bit
+        if (d.properties.NAME === 'Norway') {
+          const [x, y] = path.centroid(d);
+          return `translate(${x-50},${y + 80})`;
+        }
+        return `translate(${path.centroid(d)})`;
+      })
       .attr('text-anchor', 'middle')
       .attr('dy', '.35em')
       .attr('font-size', '8px')

@@ -38,7 +38,8 @@
     </p>
     <p>
       <a href="https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Living_conditions_in_Europe_-_material_deprivation_and_economic_strain#Context">Context</a> • 
-      <a href="https://ec.europa.eu/eurostat/databrowser/view/ilc_mdsd18/default/table?lang=en&category=livcon.ilc.ilc_md.ilc_mdsd">Source data</a>
+      <a href="https://ec.europa.eu/eurostat/databrowser/view/ilc_mdsd18/default/table?lang=en&category=livcon.ilc.ilc_md.ilc_mdsd">Source data</a> •
+      <a href="https://github.com/vertis/euro-msd-d3">GitHub</a> - contributions welcome!
     </p>
   </div>
 
@@ -47,5 +48,3 @@
     <EuropeMap data={latest} title="Latest 2023" />
   </div>
 </div>
-
-
